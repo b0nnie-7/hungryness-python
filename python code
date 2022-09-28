@@ -1,0 +1,14 @@
+# Create by Bonnie Zhu
+# Create on Sep 28th
+# This program is Hungryness
+hungryness = 0
+
+def on_forever():
+    global hungryness
+    if input.button_is_pressed(Button.A):
+        hungryness = hungryness + 1
+        basic.show_number(hungryness)
+    elif hungryness:
+        hungryness = 0
+        basic.show_number(hungryness)
+basic.forever(on_forever)
